@@ -3,31 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --login-color: 106, 129, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: rgb(142, 159, 255);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+
+.table-head {
+    border: 1px solid white;
+    border-radius: 0.43rem;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.table-cell {
+    padding-left: 0.5rem;
+}
+
+.select-cell {
+    padding-left: 0px;
+    border: none;
+    outline: none;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjEuNSIgdmlld0JveD0iMCAwIDI0IDI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im02IDkgNiA2IDYtNiIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJzdHJva2UtMDAwMDAwIj48L3BhdGg+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    width: 70%;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+.select-cell option {
+    background-color: rgb(142, 159, 255);
+    font-size: 0.9rem;
 }
